@@ -1,0 +1,9 @@
+
+<app-new-item (newItemClicked)="handleItemAdded($event)"></app-new-item>
+
+<ul *ngFor="let item of items">    
+    <li>
+    <app-item [name]="item" (itemDelete)="handleDeleteItem($event)"></app-item>
+    </li>
+</ul>
+
