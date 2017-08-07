@@ -1,0 +1,6 @@
+<div class="todo-task" [class.todo-task-done]="theTask.isDone">
+    <div class="todo-task-name">{{theTask.name}}</div>
+    <button class="todo-del-btn" (click)="deleteTask()"><img src="../../assets/icons/trash.png" height="20"/></button>
+    <button class="todo-done-btn" (click)="markDoneTask()">Done</button>    
+    <div class="todo-task-description" [class.todo-task-description-done]="theTask.isDone">{{theTask.description}}</div>
+</div>

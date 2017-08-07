@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { TodoitemsPromiseService } from './todoitems-promise.service';
+import { TodoitemsPromiseService } from './todotasks-promise.service';
 
 describe('TodoitemsPromiseService', () => {
   beforeEach(() => {

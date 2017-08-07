@@ -1,0 +1,44 @@
+.todo-task {
+    width: 400px;        
+    height: 40px;
+    border: 1px solid white;
+    background: dodgerblue;
+    border-radius: 10px;   
+    margin-right: 10px; 
+    color: white;
+    vertical-align: middle;    
+    outline: none;
+    padding: 10px 0 10px 20px;
+}
+
+.todo-task-done {
+    background: yellowgreen;
+    color: navy;
+}
+
+.todo-task-description {
+    width: 300px;
+    font-size: 8pt;
+    font-style: italic;
+    margin-top: 3px;
+    color: #ccc;
+}
+
+.todo-task-description-done {
+    color: navy;
+}
+
+.todo-task-name {
+    width: 300px;
+    display: inline;
+}
+
+.todo-done-btn {
+    float: right;
+    margin-right: 10px;
+}
+
+.todo-del-btn {
+    float: right;
+    margin-right: 10px;
+}

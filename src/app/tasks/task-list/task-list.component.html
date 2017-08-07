@@ -1,0 +1,17 @@
+
+<app-new-task (newTaskClicked)="handleTaskAdded($event)"></app-new-task>
+
+<div class="task-list-filter-label">Filter by:</div> 
+<div class="task-list-filter-input"><input type="text" #listFilter (keyup)="0" /></div> 
+
+<ul class="task-list" *ngFor="let task of (tasks | taskListByNamePipe:listFilter.value)">  
+    <li >
+    <app-task [theTask]="task" 
+        (taskDelete)="handleDeleteTask($event)"
+        (taskMarkDone)="handleMarkTaskDone($event)"
+    >
+    </app-task>
+    <!-- <span class="badge">{{task.name}}</span> -->
+    </li>
+</ul>
+

@@ -1,6 +1,15 @@
 {
-  "todoitems": [
-    "Kupić chleb",
-    "Wyprasować koszulę",
+  "data": [
+    { "name": "Kupić chleb", "description": "żytni razowy", "isDone": false},
+    { "name": "zjeść śniadanie", "description": "pycha", "isDone": true},    
+    { "name": "Wyprasować koszulę", "description": "kancik kancik", "isDone": false},
+    { "name": "Kupić probiotyk", "description": "", "isDone": true },
+    { "name": "odebrać spodnie od krawca", "description": "piątek", "isDone": false },
+    { "name": "zamowic obudowe do DELLa", "description": "E7470", "isDone": false },
+    { "name": "Zlecić przelew", "description": "PKO -> mBank", "isDone": true },
+    { "name": "zlozyc wniosek 500+", "description": "", "isDone": false },
+    { "name": "kupic Clatra", "description": "", "isDone": false },
+    { "name": "rossmann kosmetyki do kąpieli", "description": "+inne rzeczy", "isDone": false },
+    { "name": "Przekazac pismo do banku", "description": "!!!", "isDone": false }
   ]
 }
