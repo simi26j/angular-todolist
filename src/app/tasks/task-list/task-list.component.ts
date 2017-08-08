@@ -1,21 +1,10 @@
 import { TasksPromiseService } from './tasks-promise.service';
 import { TaskObservableService } from './task-observable.service';
 import { Observable } from 'rxjs/Rx';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
 import { Task } from '../../shared/task';
-
-// const TASKS: Task[] = [
-//   { name: 'Kupić probiotyk', description: '', isDone: true },
-//   { name: 'odebrać spodnie od krawca', description: 'piątek', isDone: false },
-//   { name: 'zamowic obudowe do DELLa', description: 'E7470', isDone: false },
-//   { name: 'Zlecić przelew', description: 'PKO -> mBank', isDone: true },
-//   { name: 'zlozyc wniosek 500+', description: '', isDone: false },
-//   { name: 'kupic Clatra', description: '', isDone: false },
-//   { name: 'rossmann kosmetyki do kąpieli', description: '+inne rzeczy', isDone: false },
-//   { name: 'Przekazac pismo do banku', description: '!!!', isDone: false }
-// ];
 
 @Component({
   selector: 'app-task-list',
@@ -30,6 +19,9 @@ export class TaskListComponent implements OnInit {
 
   public tasksObservable: Observable<Task[]>;
   public tasksPromise: Array<Task>;
+
+  // @Input() tasksDone = this.tasks.filter(task => task.isDone);
+  // @Input() tasksPending;
 
   constructor(
     private taskObservableService: TaskObservableService,
@@ -81,7 +73,7 @@ export class TaskListComponent implements OnInit {
 
   handleMarkTaskDone(taskMarked: Task) {
     const theIndex = this.tasks.indexOf(taskMarked);
-    if (theIndex > 0) {
+    if (theIndex >= 0) {
       if (this.tasks[theIndex].isDone) {
         this.tasks[theIndex].isDone = false;
       } else {
@@ -93,7 +85,7 @@ export class TaskListComponent implements OnInit {
   handleDeleteTask(taskDeleted: Task) {
     if (confirm('This will permanently remove this task [consider marking as done?]. Are you sure you want to do this?')) {
       const theIndex = this.tasks.indexOf(taskDeleted);
-      if (theIndex > 0) { // item found
+      if (theIndex >= 0) { // item found
         this.tasks.splice(theIndex, 1);
       }
     } else {

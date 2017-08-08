@@ -15,3 +15,6 @@
     </li>
 </ul>
 
+<div class="task-list-count-label">Current task status</div>
+<div class="task-list-count-pending">Pending: {{tasks.length - (tasks | taskListDonePipe)?.length}}</div>
+<div class="task-list-count-done">Done: {{(tasks | taskListDonePipe)?.length}}</div>
