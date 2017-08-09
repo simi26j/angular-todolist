@@ -1,3 +1,4 @@
+import { TaskListComponent } from './tasks/task-list/task-list.component';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -7,7 +8,7 @@ import { AppCustomPreloader } from './app-routing-loader';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'home', component: AppComponent },
+    { path: 'home', component: TaskListComponent },
     // { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
     // { path: 'login', component: LoginComponent },
     {
